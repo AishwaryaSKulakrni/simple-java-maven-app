@@ -53,7 +53,7 @@ pipeline{
         stage("Sonarqube Analysis"){
             steps{
                 echo "====++++executing A++++===="
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('sonarqube') {
                 sh 'mvn sonar:sonar'
             }
             }
